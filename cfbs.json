@@ -1,0 +1,7 @@
+{
+  "name": "m-testing@master",
+  "type": "policy-set",
+  "description": "Example description",
+  "build": [],
+  "git": true
+}
