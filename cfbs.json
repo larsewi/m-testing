@@ -26,6 +26,34 @@
         "delete templates/README.md",
         "copy ./ ./"
       ]
+    },
+    {
+      "name": "library-for-promise-types-in-python",
+      "description": "Library enabling promise types implemented in python.",
+      "tags": ["supported", "library"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/cfengine",
+      "version": "0.2.1",
+      "commit": "70afe61739bbb2cfc205dc0b604fbdda96b6be43",
+      "subdirectory": "libraries/python",
+      "added_by": "promise-type-git",
+      "steps": ["copy cfengine.py modules/promises/"]
+    },
+    {
+      "name": "promise-type-git",
+      "version": "0.1.0",
+      "description": "Promise type to manage git repos.",
+      "tags": ["supported", "promise-type"],
+      "repo": "https://github.com/cfengine/modules",
+      "by": "https://github.com/tranchitella",
+      "commit": "be3bc015f6a19e945bb7a9fa0ed78c97e2cecf61",
+      "subdirectory": "promise-types/git",
+      "dependencies": ["library-for-promise-types-in-python"],
+      "added_by": "cfbs add",
+      "steps": [
+        "copy git.py modules/promises/",
+        "append enable.cf services/init.cf"
+      ]
     }
   ],
   "git": true
